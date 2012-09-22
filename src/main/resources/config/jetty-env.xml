@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" "http://jetty.mortbay.org/configure.dtd">
+
+<Configure class="org.eclipse.jetty.webapp.WebAppContext">
+
+	<Call class="org.eclipse.jetty.util.log.Log" name="debug">
+		<Arg>Importing [jetty-env.xml] configuration</Arg>
+	</Call>
+
+	<!-- DAO : Oracle Database -->	
+	<New id="${jdbc.jndi}" class="org.eclipse.jetty.plus.jndi.Resource">
+		<Arg>${jdbc.jndi}</Arg>
+		<Arg>
+			<New class="org.apache.commons.dbcp.BasicDataSource">
+			    <Set name="driverClassName">${jdbc.driverClassName}</Set>
+				<Set name="user">${jdbc.username}</Set>
+				<Set name="password">${jdbc.password}</Set>
+				<Set name="URL">${jdbc.url}</Set>
+			</New>
+		</Arg>
+		
+		<!--<Arg>
+	        <New class="org.postgresql.ds.PGSimpleDataSource">
+	           <Set name="User">${jdbc.username}</Set>
+	           <Set name="Password">${jdbc.password}</Set>
+	           <Set name="DatabaseName">ampdatabase</Set>
+	           <Set name="ServerName">localhost</Set>
+	           <Set name="PortNumber">5432</Set>
+	        </New>
+	     </Arg>-->
+	</New>
+
+</Configure>
