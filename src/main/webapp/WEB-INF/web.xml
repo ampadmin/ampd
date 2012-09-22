@@ -4,10 +4,12 @@
 
 <web-app>
   <display-name>amp</display-name>
-  	<listener>
+  <welcome-file-list>
+      index.jsp
+  </welcome-file-list>
+  	<!-- <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-    </listener>
-    
+    </listener> -->
 	<filter>
 	  <filter-name>struts2</filter-name>
 	  <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
