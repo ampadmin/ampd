@@ -161,7 +161,7 @@
 				<configuration>
 					<webAppConfig>
 						<contextPath>/ampd</contextPath>
-						 <jettyEnvXml>/WEB-INF/classes/config/jetty-env.xml</jettyEnvXml>
+						 <jettyEnvXml>src/main/resources/config/jetty-env.xml</jettyEnvXml>
 					</webAppConfig>
 				</configuration>
 			</plugin>

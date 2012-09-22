@@ -13,9 +13,9 @@
 		<Arg>
 			<New class="org.apache.commons.dbcp.BasicDataSource">
 			    <Set name="driverClassName">${jdbc.driverClassName}</Set>
-				<Set name="user">${jdbc.username}</Set>
+				<Set name="username">${jdbc.username}</Set>
 				<Set name="password">${jdbc.password}</Set>
-				<Set name="URL">${jdbc.url}</Set>
+				<Set name="url">${jdbc.url}</Set>
 			</New>
 		</Arg>
 		
